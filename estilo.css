@@ -1,0 +1,31 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header; }
+  
+  .main { grid-area: main; }
+  
+  .footer { grid-area: footer; }
+  
+
+  @media screen { max-width: 600px;
+    
+  }
+
+#fondoimagen {
+    background-image: url(/imagenes/avion.jpg);
+}
+
+#color1{
+  background-color: rgb(242, 189, 189); 
+  height: 80px;
+  border: 5px solid black;
+  }

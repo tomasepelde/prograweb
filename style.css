@@ -1,0 +1,35 @@
+#color1{
+    background-color: rgb(242, 189, 189); 
+    height: 80px;
+    border: 5px solid black;
+}
+
+h1{
+    color:black; 
+    text-align: center; 
+    font-size: 40px;
+}
+
+#color2{
+    background-color: rgb(0, 251, 255);
+    height: 90px;
+    border: 5px solid black;
+}
+
+h2{
+    color:black;
+    text-align: center;
+    font-size: 40px;
+}
+@media screen and (max-width: 60px) {
+    body{}
+    h1{}
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: ;
+    flex-wrap: nowrap; eslo que pasa si ya no entra;
+    justify-content: flex-start;
+}
+
