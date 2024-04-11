@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 200vh; /* Ajusta la altura según tu diseño */
+  height: 100vh; /* Ajusta la altura según tu diseño */
 }
   
   .header { grid-area: header; width: 100%;}
@@ -54,41 +54,10 @@
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
 
-
 }
 
-#color1{
-  background-color: rgb(242, 189, 189); 
-  height: 80px;
-  border: 5px solid black;
-  }
 
-.imagendefondo{
-  display: block;
-  opacity: 0.5;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.tituloconimagen {
-  width: 100%;
-  height: 200px;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
-
-.imagen {
-  display: flex;
-  justify-content: center; 
-  align-items: center; 
-  max-width: 50%;
-  margin-right: 20px;
-
-}
 
 .contenedor2{
   position: relative;
@@ -98,11 +67,7 @@
   
 }
 
-.textoarribadeimagen{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
+
 .centrar{
   position: absolute;
   top: 50%;
@@ -117,12 +82,31 @@
   justify-content: space-evenly;
   position: relative;
   height: auto;
-  z-index: -1; /* Para que las cards aparezcan por encima de la navbar desplegable, SI NO EL NAVBAR QUEDA POR ABAJO DE LAS CARDS */
+  z-index: 0; /* Para que las cards aparezcan por encima de la navbar desplegable, SI NO EL NAVBAR QUEDA POR ABAJO DE LAS CARDS */
 } 
 
+.texto {
+  margin-top: 20px;
+}
+
+.imagen {
+  margin-top: 20px;
+  width: 450px;
+}
 @media (max-width: 600px) {
   .cards{
 flex-direction: column;
   }
-  
+  .container {
+    height: 200vh; 
+  }
+  .texto {
+    margin-top: 8vw;
+  }
+  .imagen {
+    margin-top: 8vw;
+    width: 90%
+  }
+    
 }
+
