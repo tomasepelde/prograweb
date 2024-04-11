@@ -1,22 +1,10 @@
 
 
-.container {  
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 25%;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "main main main"
-      "footer footer footer";
-    margin-left: 0;
-    padding-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-  
-    }
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 200vh; /* Ajusta la altura según tu diseño */
+}
   
   .header { grid-area: header; width: 100%;}
   
@@ -26,9 +14,16 @@
     margin-top: 50px;
     display: flex;
     justify-content: center;
-    padding-left: 10%;}
+    }
   
-  .footer { grid-area: footer; width: 100%;}
+  .footer {
+    grid-area: footer; 
+    width: 100%;
+    background-color: lightslategray;
+    font-family: 'Times New Roman', Times, serif;
+    
+    bottom: 0;
+  }
   
 
 
@@ -121,7 +116,8 @@
   flex-wrap: nowrap; 
   justify-content: space-evenly;
   position: relative;
-  height: 10vw;
+  height: auto;
+  z-index: -1; /* Para que las cards aparezcan por encima de la navbar desplegable, SI NO EL NAVBAR QUEDA POR ABAJO DE LAS CARDS */
 } 
 
 @media (max-width: 600px) {
