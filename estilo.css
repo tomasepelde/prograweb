@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ajusta la altura según tu diseño */
+  height: 100vh; 
 }
   
   .header { grid-area: header; width: 100%;}
@@ -83,7 +83,7 @@
   justify-content: space-evenly;
   position: relative;
   height: auto;
-  z-index: 0; /* Para que las cards aparezcan por encima de la navbar desplegable, SI NO EL NAVBAR QUEDA POR ABAJO DE LAS CARDS */
+  z-index: 0; 
 } 
 
 .texto {
@@ -200,9 +200,9 @@ margin-bottom: 50px;
 
 .titulo-container {
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100px; /* Ajusta la altura según tu diseño */
+  justify-content: center; 
+  align-items: center; 
+  height: 100px; 
 }
 
 @media (max-width: 600px) {
@@ -228,5 +228,7 @@ flex-direction: column;
     margin-bottom: 50px;
     
     }
-    
+  .contenido-carrito {
+    font-size: 15px;
+  }
 }

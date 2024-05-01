@@ -57,10 +57,10 @@ LIBROS.forEach((libro)=> {
 verCarrito.addEventListener("click", () => {
     carritoContainer.innerHTML = ""
     carritoContainer.style.display = "flex";
-//modal header es headertotal
+
     const headerTotal = document.createElement("div");
     headerTotal.className = "header1"
-    //el modal-header-title es titulo header
+
     headerTotal.innerHTML = `
         <h1 class="tituloheader"> CARRITO </h1>
     `;
@@ -68,7 +68,7 @@ verCarrito.addEventListener("click", () => {
 
     const salir = document.createElement("h1");
     salir.innerText = "X"
-    //modal-header-button
+
     salir.className = "boton-salir";
 
     salir.addEventListener("click", () => {
@@ -81,7 +81,7 @@ verCarrito.addEventListener("click", () => {
 
 
         let contenidoCarrito = document.createElement("div")
-        //modal-content
+
         contenidoCarrito.className = "contenido-carrito"
         contenidoCarrito.innerHTML = `
             <img src = "${libro.img}">
@@ -95,7 +95,7 @@ verCarrito.addEventListener("click", () => {
     const total = CARRITO.reduce((acumulador, producto) => acumulador + producto.precio,0);
 
     const totalCompra = document.createElement("div")
-    //total-content
+
     totalCompra.className = "total-contenido"
     totalCompra.innerHTML = `Total a pagar: $ ${total}`;
     carritoContainer.append(totalCompra)
