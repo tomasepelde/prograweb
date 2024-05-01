@@ -195,6 +195,14 @@ margin-bottom: 50px;
   cursor: pointer;
 }
 
+
+.titulo-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100px; /* Ajusta la altura según tu diseño */
+}
+
 @media (max-width: 600px) {
   .cards{
 flex-direction: column;
@@ -211,11 +219,3 @@ flex-direction: column;
   }
     
 }
-
-.titulo-container {
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 100px; /* Ajusta la altura según tu diseño */
-}
-
