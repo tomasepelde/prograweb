@@ -154,7 +154,7 @@ margin-bottom: 50px;
   align-items: center;
   position: fixed;
   overflow: auto;
-  z-index: 9;
+  z-index: 1100;
   top: 12vh;
   scrollbar-color: none;
 }
@@ -195,6 +195,7 @@ margin-bottom: 50px;
 .ver-carrito {
   cursor: pointer;
 }
+
 
 
 .titulo-container {
