@@ -93,6 +93,108 @@
   margin-top: 20px;
   width: 450px;
 }
+
+
+.contenidoTienda {
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px;
+
+}
+
+.card {
+max-width: 300px;
+margin: auto;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+margin-bottom: 50px;
+
+}
+
+.card > img {
+  width: 100%;
+  max-height: 250px;
+}
+
+.precio {
+  color: rgb(74, 73, 73);
+  font-size: 22px;
+  }
+
+
+
+.card button {
+  border: none;
+  padding: 12px;
+  color: white; 
+  background-color: rgba(0, 0, 0, 0.789);
+  text-align: center;
+  cursor:pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+
+
+
+.headerTotal {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: white;
+  background-color: lightslategray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+
+.total-contenido {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.tituloheader {
+  justify-self: start;
+}
+
+.boton-salir {
+  cursor: pointer;
+  color: red;
+  display:flex;align-items:center; justify-content:center;
+}
+
+.headerTotal > .contenido-carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 10px;
+}
+
+.headerTotal > .contenido-carrito > img {
+  width: 100%;
+  max-width: 150px;
+  max-height: 50%;
+}
+
+.ver-carrito {
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   .cards{
 flex-direction: column;
@@ -108,5 +210,12 @@ flex-direction: column;
     width: 90%
   }
     
+}
+
+.titulo-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100px; /* Ajusta la altura según tu diseño */
 }
 
