@@ -230,5 +230,43 @@ flex-direction: column;
     }
   .contenido-carrito {
     font-size: 15px;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
 }
+
+.contenido-carrito img {
+    max-width: 80%;
+    height: auto;
+}
+
+.contenido-carrito h3 {
+    text-align: center;
+    margin: 1px 0;
+    font-size: 14px;
+}
+
+.contenido-carrito h4 {
+    text-align: center;
+    margin: 1px 0;
+    font-size: 14px;
+}
+}
+
+.compra-final {
+  border: none;
+  padding: 12px;
+  color: white;
+  background-color: #28a745;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 2%;
+  border: solid black;
+}
+
+
