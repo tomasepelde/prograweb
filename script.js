@@ -30,13 +30,13 @@ const LIBROS = [
 },{
     id : 5,
     nombre: "Saudade",
-    precio: 17500,
+    precio: 21000,
     img:
         "https://http2.mlstatic.com/D_NQ_NP_863421-MLU71096003034_082023-O.webp"
 },{
     id : 6,
     nombre: "Wonderlust",
-    precio: 17500,
+    precio: 18000,
     img:
         "https://images.cdn1.buscalibre.com/fit-in/360x360/73/4a/734a569dcc4f6b3a2d601a11bdc98437.jpg"
 }

@@ -240,18 +240,22 @@ flex-direction: column;
 .contenido-carrito img {
     max-width: 80%;
     height: auto;
+
 }
 
 .contenido-carrito h3 {
     text-align: center;
     margin: 1px 0;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .contenido-carrito h4 {
     text-align: center;
     margin: 1px 0;
-    font-size: 14px;
+    font-size: 12px;
+}
+.carousel-inner img {
+  max-height: 200px;
 }
 }
 
@@ -270,3 +274,14 @@ flex-direction: column;
 }
 
 
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+  
+}
+
+.carousel {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 800px;
+}
