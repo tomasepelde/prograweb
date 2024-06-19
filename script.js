@@ -120,7 +120,33 @@ verCarrito.addEventListener("click", () => {
             <h4> Cantidad:  ${libro.cantidad} </h4> 
             <h4> Total: $ ${libro.total} </h4>
         `;
-
+    
+        const botonEliminar = document.createElement("button");
+        botonEliminar.innerText = "Eliminar";
+        botonEliminar.className = "boton-eliminar";
+        botonEliminar.addEventListener("click", () => {
+            CARRITO = CARRITO.filter(item => item.id !== libro.id);
+            contenidoCarrito.remove();
+            actualizarTotal();
+        });
+        
+        const botonReducir = document.createElement("button");
+        botonReducir.innerText = "-1";
+        botonReducir.className = "boton-reducir";
+        botonReducir.addEventListener("click", () => {
+            if (libro.cantidad > 1) {
+                libro.cantidad -= 1;
+                libro.total = libro.cantidad * libro.precio;
+                document.getElementById(`cantidad-${libro.id}`).innerText = libro.cantidad;
+                document.getElementById(`total-${libro.id}`).innerText = libro.total;
+            } else {
+                CARRITO = CARRITO.filter(item => item.id !== libro.id);
+                contenidoCarrito.remove();
+            }
+            actualizarTotal();
+        });    
+    
+    contenidoCarrito.append(botonEliminar, botonReducir);
     carritoContainer.append(contenidoCarrito)
     });
 
@@ -173,5 +199,11 @@ verCarrito.addEventListener("click", () => {
     }
 
             })
-        
+            function actualizarTotal() {
+                const total = CARRITO.reduce((acumulador, producto) => acumulador + (producto.precio * producto.cantidad), 0);
+                totalCompra.innerHTML = `Total a pagar: $ ${total}`; 
+            }
+            actualizarTotal();
         })
+
+
