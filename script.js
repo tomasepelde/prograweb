@@ -116,34 +116,38 @@ verCarrito.addEventListener("click", () => {
         contenidoCarrito.className = "contenido-carrito"
         contenidoCarrito.innerHTML = `
             <img src = "${libro.img}">
-            <h3>${libro.nombre}</h3> 
-            <h4> Cantidad:  ${libro.cantidad} </h4> 
-            <h4> Total: $ ${libro.total} </h4>
+            <div class="detalles">
+            <h3>${libro.nombre}</h3>
+            <h4 id="cantidad-${libro.id}">Cantidad: ${libro.cantidad}</h4>
+            <h4 id="total-${libro.id}">Total: $ ${libro.total}</h4>
+          </div>
+            <div class="botones">
+            <button class="boton-eliminar" data-id="${libro.id}">Eliminar</button>
+            <button class="boton-reducir" data-id="${libro.id}">-1</button>
+        </div>
         `;
     
-        const botonEliminar = document.createElement("button");
-        botonEliminar.innerText = "Eliminar";
-        botonEliminar.className = "boton-eliminar";
+        const botonEliminar = contenidoCarrito.querySelector(".boton-eliminar");
         botonEliminar.addEventListener("click", () => {
             CARRITO = CARRITO.filter(item => item.id !== libro.id);
             contenidoCarrito.remove();
             actualizarTotal();
         });
         
-        const botonReducir = document.createElement("button");
-        botonReducir.innerText = "-1";
-        botonReducir.className = "boton-reducir";
+        const botonReducir = contenidoCarrito.querySelector(".boton-reducir");
         botonReducir.addEventListener("click", () => {
             if (libro.cantidad > 1) {
                 libro.cantidad -= 1;
                 libro.total = libro.cantidad * libro.precio;
-                document.getElementById(`cantidad-${libro.id}`).innerText = libro.cantidad;
-                document.getElementById(`total-${libro.id}`).innerText = libro.total;
+                document.getElementById(`cantidad-${libro.id}`).innerText = `Cantidad: ${libro.cantidad}`
+                document.getElementById(`total-${libro.id}`).innerText = `Total: $ ${libro.total}`;
+                actualizarTotal();
             } else {
                 CARRITO = CARRITO.filter(item => item.id !== libro.id);
                 contenidoCarrito.remove();
+                actualizarTotal();
             }
-            actualizarTotal();
+            
         });    
     
     contenidoCarrito.append(botonEliminar, botonReducir);
