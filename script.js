@@ -122,8 +122,9 @@ verCarrito.addEventListener("click", () => {
             <h4 id="total-${libro.id}">Total: $ ${libro.total}</h4>
           </div>
             <div class="botones">
-            <button class="boton-eliminar" data-id="${libro.id}">Eliminar</button>
+            <button class="boton-eliminar" data-id="${libro.id}">❌</button>
             <button class="boton-reducir" data-id="${libro.id}">-1</button>
+            <button class="boton-agregar" data-id="${libro.id}">+1</button>
         </div>
         `;
     
@@ -149,8 +150,20 @@ verCarrito.addEventListener("click", () => {
             }
             
         });    
+
+        const botonAgregar = contenidoCarrito.querySelector(".boton-agregar");
+        botonAgregar.addEventListener("click", () => {
+            if (libro.cantidad >= 1) {
+                libro.cantidad += 1;
+                libro.total = libro.cantidad * libro.precio;
+                document.getElementById(`cantidad-${libro.id}`).innerText = `Cantidad: ${libro.cantidad}`
+                document.getElementById(`total-${libro.id}`).innerText = `Total: $ ${libro.total}`;
+                actualizarTotal();
+            } 
+            
+        });   
     
-    contenidoCarrito.append(botonEliminar, botonReducir);
+    contenidoCarrito.append(botonEliminar, botonReducir, botonAgregar);
     carritoContainer.append(contenidoCarrito)
     });
 

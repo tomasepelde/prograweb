@@ -296,7 +296,7 @@ flex-direction: column;
 .botones {
   width: 100%;
   justify-content: space-between;
-}
+  }
 
 button.boton-eliminar {
   width: 70%;
